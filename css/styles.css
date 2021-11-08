@@ -1,0 +1,303 @@
+body {
+  margin: 0;
+  background-color: #f8f8ee;
+  min-width: 200px;
+}
+
+header {
+  background-color: white;
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+}
+
+main {
+  background-color: #f8f8ee;
+}
+
+h1 {
+  font-family: "Bungee", cursive;
+  font-size: 1rem;
+  max-width: 100%;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+  font-family: "Dosis", sans-serif;
+}
+
+p {
+  font-family: "Dosis", sans-serif;
+  font-size: 1.3rem;
+}
+
+a {
+  text-decoration: underline;
+  color: #d16435;
+}
+
+a:hover {
+  color: #b1613f;
+}
+
+.cta {
+  display: flex;
+  align-content: center;
+  align-items: baseline;
+  position: relative;
+  background-color: #d16435;
+  color: white;
+  text-decoration: none;
+  padding: 5px 30px;
+  top: -520px;
+  border: 1px solid #b1613f;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.8rem;
+}
+
+.cta i {
+  color: #363c40;
+  margin-left: 10px;
+}
+
+.cta:hover {
+  background-color: #e24e0e;
+  color: white;
+}
+
+/* HEADER */
+
+.autumn-header {
+  width: 100%;
+  height: 30px;
+  object-fit: cover;
+}
+
+.mobile-top-nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px;
+  margin: 0;
+}
+
+.mobile-top-nav i {
+  font-size: 2rem;
+  color: #363c40;
+}
+
+.hamburger {
+  display: none;
+}
+
+input#hamburger-menu {
+  display: none;
+}
+
+input#hamburger-menu:checked ~ nav.hamburger {
+  display: block;
+}
+
+.logo {
+  max-width: 30%;
+  height: auto;
+}
+
+/* MAIN PAGE */
+
+.desktop-top-nav {
+  display: none;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero img {
+  max-width: 100%;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr, auto;
+  justify-items: center;
+}
+
+.main-content img,
+p {
+  max-width: 70%;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #363c40;
+  color: white;
+  margin-top: 100px;
+}
+
+.search-bar input {
+  text-decoration: none;
+  background-color: #363c40;
+  color: white;
+  margin: 50px 0;
+  padding: 10px 80px 10px 10px;
+  border-radius: 10px;
+  border: 1px solid white;
+  font-family: "Dosis", sans-serif;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+}
+
+footer p {
+  font-size: 1.4rem;
+  line-height: 20px;
+}
+
+footer > p {
+  padding-left: 40px;
+}
+
+footer li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-family: "Dosis", sans-serif;
+  line-height: 30px;
+}
+
+.sns-links {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  margin-top: 100px;
+}
+
+footer i {
+  padding: 10px;
+}
+
+.terms-policy {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+}
+
+/* STORE */
+.store {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "main-nav main-nav main-nav side-nav"
+    "main-nav main-nav main-nav side-nav"
+    "main main main side-nav"
+    "main main main side-nav";
+}
+
+.all-or-sale {
+  grid-area: main-nav;
+}
+.store-side-navigation {
+  grid-area: side-nav;
+}
+.store-sortiment {
+  grid-area: main;
+}
+
+.slogan {
+  max-width: 50%;
+}
+
+figure img {
+  max-width: 300px;
+}
+
+figcaption {
+  background-color: #b1613f;
+}
+
+/* RESPONSIVE TABLET */
+@media screen and (min-width: 640px) {
+  .mountains {
+    width: 250px;
+  }
+
+  .cta {
+    text-decoration: none;
+    padding: 5px 30px;
+    top: -350px;
+    font-size: 1.8rem;
+  }
+}
+
+/* RESPONSIVE DESKTOP */
+@media screen and (min-width: 850px) {
+  body {
+    max-width: 1600px;
+    min-width: 1000px;
+    margin: auto;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .mobile-top-nav,
+  .fa-bars {
+    display: none;
+  }
+
+  .desktop-top-nav {
+    display: block;
+  }
+
+  .desktop-top-nav > ul {
+    display: flex;
+    padding-left: 5px;
+    margin: 0;
+  }
+
+  .desktop-top-nav > ul > li {
+    margin-right: 50px;
+    font-size: 1.3rem;
+  }
+
+  .desktop-top-nav i {
+    font-size: 1.3rem;
+    color: #363c40;
+  }
+
+  .desktop-top-nav ul li:nth-child(4) > input {
+    border-radius: 7px;
+    margin-left: 3px;
+    max-width: 30%;
+  }
+
+  .logo {
+    max-width: 15%;
+  }
+
+  .cta {
+    text-decoration: none;
+    padding: 10px 40px;
+    top: -650px;
+    font-size: 2.4rem;
+  }
+
+  .mountains {
+    width: 350px;
+  }
+}
+
+/*
+  font-family: 'Bungee', cursive;
+  font-family: 'Dosis', sans-serif;
+  */
