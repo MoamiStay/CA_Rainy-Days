@@ -4,6 +4,10 @@ body {
   min-width: 200px;
 }
 
+* {
+  border: 1px solid black;
+}
+
 header {
   background-color: white;
   position: sticky;
@@ -194,7 +198,6 @@ footer i {
 /* STORE */
 .store {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-areas:
     "main-nav main-nav main-nav side-nav"
     "main-nav main-nav main-nav side-nav"
@@ -204,24 +207,120 @@ footer i {
 
 .all-or-sale {
   grid-area: main-nav;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
 }
+
 .store-side-navigation {
   grid-area: side-nav;
+  position: fixed;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  height: 100%;
 }
+
+.store-side-navigation > ul {
+  margin: 0;
+  padding: 0;
+}
+
+.store-side-navigation > ul > li,
+.store-side-navigation a {
+  margin: 0 5px 50px 0;
+  text-decoration: none;
+  color: #363c40;
+}
+
 .store-sortiment {
   grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
 }
 
 .slogan {
   max-width: 50%;
 }
 
+.all-sale-menu {
+  display: flex;
+  padding: 0;
+}
+
+.all-sale-menu a {
+  padding: 40px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #d16435;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
 figure img {
-  max-width: 300px;
+  max-width: 100%;
+}
+
+figure {
+  max-width: 80%;
+  margin: 0;
 }
 
 figcaption {
-  background-color: #b1613f;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+figcaption:last-child {
+  justify-content: center;
+}
+
+.prod-name {
+  flex-basis: 50%;
+  margin: 5px 0 0 5px;
+  font-size: 0.9rem;
+  max-height: 40px;
+}
+
+.price,
+.discount,
+.new-price {
+  position: relative;
+  flex-basis: 30%;
+  top: -10px;
+  margin-left: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.view {
+  text-decoration: none;
+  background-color: #d16435;
+  color: white;
+  height: 10px;
+  margin-bottom: 10px;
+  padding: 10px 40px;
+  font-size: 0.7rem;
+}
+
+/* SALE */
+
+.discount,
+.new-price {
+  flex-basis: 15%;
+  font-size: 0.9rem;
+}
+
+.discount {
+  color: red;
+  text-decoration: line-through;
 }
 
 /* RESPONSIVE TABLET */
@@ -295,9 +394,30 @@ figcaption {
   .mountains {
     width: 350px;
   }
+
+  /* STORE & SALE */
+
+  .prod-group {
+    grid-area: group;
+  }
+
+  .store-side-navigation {
+    display: none;
+  }
+
+  .store-sortiment {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+  }
+}
+
+.slogan {
+  max-width: 25%;
 }
 
 /*
   font-family: 'Bungee', cursive;
   font-family: 'Dosis', sans-serif;
-  */
+  */ ;
