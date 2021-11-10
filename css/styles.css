@@ -136,6 +136,11 @@ p {
   max-width: 70%;
 }
 
+/* CART */
+.cart-item {
+  display: flex;
+}
+
 /* FOOTER */
 
 footer {
@@ -321,6 +326,52 @@ figcaption:last-child {
 .discount {
   color: red;
   text-decoration: line-through;
+}
+
+/* PRODUCT PAGE */
+.prod-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-img {
+  max-width: 100%;
+}
+
+.product-preview-images {
+  display: flex;
+  max-width: 100%;
+}
+
+.button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.button * {
+  padding: 0 10px;
+}
+
+.dark {
+  background-color: #363c40;
+}
+
+.light {
+  background-color: white;
+}
+
+.recent {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.prod-description {
+  display: flex;
+  gap: 30px;
+}
+
+.prod-description ul {
+  padding: 0;
 }
 
 /* RESPONSIVE TABLET */
