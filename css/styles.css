@@ -54,10 +54,13 @@ a:hover {
   color: white;
   text-decoration: none;
   padding: 5px 30px;
-  top: -520px;
   border: 1px solid #b1613f;
   font-family: "Dosis", sans-serif;
   font-size: 1.8rem;
+}
+
+.hero-cta {
+  top: -520px;
 }
 
 .cta i {
@@ -332,47 +335,67 @@ figcaption:last-child {
 .prod-page {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
-.product-img {
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-view img {
   max-width: 100%;
 }
 
 .product-preview-images {
   display: flex;
-  max-width: 100%;
 }
 
-.button {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-.button * {
-  padding: 0 10px;
+.product-preview-images img {
+  width: 23.6%;
+  padding: 0.8%;
 }
 
-.dark {
-  background-color: #363c40;
-}
-
-.light {
-  background-color: white;
-}
-
-.recent {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+.product-preview-images img:first-child {
+  padding-left: 0;
 }
 
 .prod-description {
   display: flex;
-  gap: 30px;
 }
 
 .prod-description ul {
   padding: 0;
+  margin-right: 20px;
 }
+
+.recent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.recent > figure > img {
+  max-width: 100%;
+}
+
+/* CART */
+
+.cart-item {
+  display: flex;
+  max-height: 100px;
+}
+
+.cart-item img {
+  max-width: 10%;
+  object-fit: contain;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* CHECKOUT */
 
 /* RESPONSIVE TABLET */
 @media screen and (min-width: 640px) {
@@ -383,8 +406,11 @@ figcaption:last-child {
   .cta {
     text-decoration: none;
     padding: 5px 30px;
-    top: -350px;
     font-size: 1.8rem;
+  }
+
+  .hero-cta {
+    top: -350px;
   }
 }
 
@@ -438,8 +464,11 @@ figcaption:last-child {
   .cta {
     text-decoration: none;
     padding: 10px 40px;
-    top: -650px;
     font-size: 2.4rem;
+  }
+
+  .hero-cta {
+    top: -650px;
   }
 
   .mountains {
