@@ -91,9 +91,10 @@
       </nav>
     </header>
 
-    <main>
+    <main class="checkout">
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nulla, tenetur dicta error blanditiis ducimus natus temporibus rem fugit! Adipisci?</p>
     <h1>SHIPPING DETAILS</h1>
+    <div class="form">
     <h2>CONTACT INFO</h2>
     <label for="fname">First Name:</label>
     <input type="text" name="fname">
@@ -133,42 +134,48 @@
 <label for="discount">DISCOUNT CODE:</label>
 <input type="text" name="discount">
 
-<div>
+<div class="checkbox">
 <label for="policy"> </label>
 <input type="checkbox" name="additional" id="policy" value="policy">
-<p>I accept Rainy Days Privacy Policy</p>
+<p>I accept Rainy Days Privacy Policy and collecting of personal data.</p>
 </div>
 
-<div>
+<div class="checkbox">
   <label for="termsandconditions"> </label>
   <input type="checkbox" name="additional" id="termsandconditions" value="termsandconditions">
   <p>I have read and understood Terms and Conditions</p>
   </div>
 
   <h2>PAYMENT METHOD</h2>
+</div>
+  <div class="payment-options">
   <a href="#"><img src="#" alt="paypal"> </a>
   <a href="#"><img src="#" alt="Klarna"> </a>
   <a href="#"><img src="#" alt="Vipps"> </a>
+</div>
 
+<div>
   <a href="/checkout-success.html" class="cta">PAY</a>
+</div>
 
   <h3>ORDER</h3>
+  <div>
   <div class="cart-item">
     <img src="/images/black-jacket.png" alt="windbreaker jacket black">
     <p>Windbreaker jacket black</p>
-    <p>remove</p>
+    <p class="small-text">remove</p>
     <p>499,-</p>
   </div>
   <div class="cart-item">
     <img src="/images/black-jacket.png" alt="windbreaker jacket black">
     <p>Windbreaker jacket black</p>
-    <p>remove</p>
+    <p class="small-text">remove</p>
     <p>499,-</p>
   </div>
   <div class="cart-item">
     <img src="/images/black-jacket.png" alt="windbreaker jacket black">
     <p>Windbreaker jacket black</p>
-    <p>remove</p>
+    <p class="small-text">remove</p>
     <p>499,-</p>
   </div>
   
@@ -177,6 +184,7 @@
 <p>49,-</p>
 <p>TOTAL</p>
 <p>1695,-</p>
+</div>
 </div>
   </main>
 

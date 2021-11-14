@@ -21,14 +21,26 @@ main {
 
 h1 {
   font-family: "Bungee", cursive;
-  font-size: 1rem;
+  font-size: 1.4rem;
   max-width: 100%;
   margin: 0;
 }
 
-li {
+h2,
+h3 {
+  font-family: "Dosis", sans-serif;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+h2 li {
   list-style-type: none;
   font-family: "Dosis", sans-serif;
+}
+
+ul {
+  list-style-type: none;
 }
 
 p {
@@ -45,13 +57,17 @@ a:hover {
   color: #b1613f;
 }
 
+.flexbox {
+  display: flex;
+}
+
 .cta {
   display: flex;
-  align-content: center;
+  justify-content: center;
+  max-width: 150px;
   align-items: baseline;
-  position: relative;
   background-color: #d16435;
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   padding: 5px 30px;
   border: 1px solid #b1613f;
@@ -59,8 +75,23 @@ a:hover {
   font-size: 1.8rem;
 }
 
+.cta-white {
+  display: flex;
+  justify-content: center;
+  max-width: 150px;
+  align-items: baseline;
+  background-color: #fcfcfc;
+  color: #b1613f;
+  text-decoration: none;
+  padding: 5px 30px;
+  border: 1px solid #b1613f;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.2rem;
+}
+
 .hero-cta {
   top: -520px;
+  position: relative;
 }
 
 .cta i {
@@ -140,9 +171,23 @@ p {
 }
 
 /* CART */
-.cart-item {
+
+.cart-item,
+.cart-cta {
   display: flex;
 }
+
+.cart-item > * {
+  margin-right: 15px;
+  font-size: 1.2rem;
+}
+
+.p-link {
+  font-size: 0.9px;
+  color: #d16435;
+}
+
+/* CHECKOUT SUCCESS */
 
 /* FOOTER */
 
@@ -379,7 +424,6 @@ figcaption:last-child {
 }
 
 /* CART */
-
 .cart-item {
   display: flex;
   max-height: 100px;
@@ -396,6 +440,44 @@ figcaption:last-child {
 }
 
 /* CHECKOUT */
+
+.checkout,
+.cart {
+  display: grid;
+  justify-items: center;
+}
+
+.checkout > p,
+.checkbox p,
+.cart-item > .small-text {
+  max-width: 90%;
+  font-size: 1rem;
+}
+
+input {
+  font-size: 1.3rem;
+  padding: 10px 10px;
+  border-radius: 10px;
+  margin: 0 10px 20px 0;
+}
+
+.form {
+  display: grid;
+  max-width: 300px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.payment-options {
+  margin: 20px 0;
+}
+
+.list > * {
+  display: inline-block;
+}
 
 /* RESPONSIVE TABLET */
 @media screen and (min-width: 640px) {
