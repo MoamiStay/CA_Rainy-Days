@@ -43,7 +43,10 @@ ul {
   list-style-type: none;
 }
 
-p {
+p,
+li,
+table,
+label {
   font-family: "Dosis", sans-serif;
   font-size: 1.3rem;
 }
@@ -57,6 +60,11 @@ a:hover {
   color: #b1613f;
 }
 
+.small-text {
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
 .flexbox {
   display: flex;
 }
@@ -65,7 +73,6 @@ a:hover {
   display: flex;
   justify-content: center;
   max-width: 150px;
-  align-items: baseline;
   background-color: #d16435;
   color: rgb(255, 255, 255);
   text-decoration: none;
@@ -73,20 +80,6 @@ a:hover {
   border: 1px solid #b1613f;
   font-family: "Dosis", sans-serif;
   font-size: 1.8rem;
-}
-
-.cta-white {
-  display: flex;
-  justify-content: center;
-  max-width: 150px;
-  align-items: baseline;
-  background-color: #fcfcfc;
-  color: #b1613f;
-  text-decoration: none;
-  padding: 5px 30px;
-  border: 1px solid #b1613f;
-  font-family: "Dosis", sans-serif;
-  font-size: 1.2rem;
 }
 
 .hero-cta {
@@ -170,23 +163,6 @@ p {
   max-width: 70%;
 }
 
-/* CART */
-
-.cart-item,
-.cart-cta {
-  display: flex;
-}
-
-.cart-item > * {
-  margin-right: 15px;
-  font-size: 1.2rem;
-}
-
-.p-link {
-  font-size: 0.9px;
-  color: #d16435;
-}
-
 /* CHECKOUT SUCCESS */
 
 /* FOOTER */
@@ -252,10 +228,10 @@ footer i {
 .store {
   display: grid;
   grid-template-areas:
-    "main-nav main-nav main-nav side-nav"
-    "main-nav main-nav main-nav side-nav"
-    "main main main side-nav"
-    "main main main side-nav";
+    " . . main-nav side-nav"
+    " . . main-nav side-nav"
+    " . .  main side-nav"
+    " . . main side-nav";
 }
 
 .all-or-sale {
@@ -338,7 +314,7 @@ figcaption:last-child {
 .prod-name {
   flex-basis: 50%;
   margin: 5px 0 0 5px;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   max-height: 40px;
 }
 
@@ -354,13 +330,9 @@ figcaption:last-child {
 }
 
 .view {
-  text-decoration: none;
-  background-color: #d16435;
-  color: white;
-  height: 10px;
   margin-bottom: 10px;
-  padding: 10px 40px;
-  font-size: 0.7rem;
+  padding: 5px 50px;
+  font-size: 1rem;
 }
 
 /* SALE */
@@ -378,14 +350,15 @@ figcaption:last-child {
 
 /* PRODUCT PAGE */
 .prod-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .product-view img {
@@ -401,8 +374,36 @@ figcaption:last-child {
   padding: 0.8%;
 }
 
+.product-preview-images img:last-child {
+  padding-right: 0;
+}
+
 .product-preview-images img:first-child {
   padding-left: 0;
+}
+
+.less-margin {
+  margin: 10px 0 5px 10px;
+}
+
+.product-amount,
+select {
+  width: 15%;
+  font-size: 1rem;
+  padding: 5px;
+  margin: 0px 10px 5px 0;
+  border-radius: 10px;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.product-page-body *,
+.checkout-success p {
+  margin-left: 10px;
 }
 
 .prod-description {
@@ -423,10 +424,27 @@ figcaption:last-child {
   max-width: 100%;
 }
 
+section > figure > figcaption > p:first-child {
+  font-size: 0.9rem;
+}
+
 /* CART */
 .cart-item {
   display: flex;
+  width: 100%;
   max-height: 100px;
+}
+
+.cart-cta {
+  display: flex;
+  justify-content: space-evenly;
+  height: 100px;
+  margin: 25px 0 100px 0;
+}
+
+.cart-item > * {
+  margin-right: 15px;
+  font-size: 1.2rem;
 }
 
 .cart-item img {
@@ -437,19 +455,52 @@ figcaption:last-child {
 .list {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  justify-content: center;
+}
+
+.list > p {
+  margin: 3px;
+}
+
+.cta-checkout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 20%;
+  height: 50%;
+  background-color: #d16435;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 5px 30px;
+  border: 1px solid #b1613f;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.6rem;
+}
+
+.cta-white {
+  display: flex;
+  justify-content: center;
+  max-width: 20%;
+  height: 50%;
+  align-items: baseline;
+  background-color: #fcfcfc;
+  color: #b1613f;
+  text-decoration: none;
+  padding: 5px 30px;
+  border: 1px solid #b1613f;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.2rem;
 }
 
 /* CHECKOUT */
 
-.checkout,
-.cart {
+.checkout {
   display: grid;
   justify-items: center;
 }
 
 .checkout > p,
-.checkbox p,
-.cart-item > .small-text {
+.checkbox p {
   max-width: 90%;
   font-size: 1rem;
 }
@@ -477,6 +528,10 @@ input {
 
 .list > * {
   display: inline-block;
+}
+
+.checkout h3 {
+  margin-top: 60px;
 }
 
 /* RESPONSIVE TABLET */
