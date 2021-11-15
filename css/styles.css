@@ -34,6 +34,11 @@ h3 {
   justify-content: center;
 }
 
+.h2 {
+  justify-content: start;
+  margin-left: 10px;
+}
+
 h2 li {
   list-style-type: none;
   font-family: "Dosis", sans-serif;
@@ -159,6 +164,10 @@ input#hamburger-menu {
 
 input#hamburger-menu:checked ~ nav.hamburger {
   display: block;
+}
+
+.hamburger ul {
+  padding: 0;
 }
 
 /* MAIN PAGE */
@@ -444,10 +453,6 @@ select {
   margin-right: 10px;
 }
 
-.spacing {
-  margin-right: 200px;
-}
-
 .desktop-side-info p:nth-of-type(2) {
   display: none;
 }
@@ -630,12 +635,6 @@ details * {
   padding: 0px 10px;
   border: 1px solid #363c40;
   margin-bottom: 20px;
-}
-
-.profile h1,
-.profile h2,
-.profile h3 {
-  justify-content: start;
 }
 
 /* NEWSLETTER */
@@ -837,6 +836,10 @@ details * {
 
   .slogan {
     max-width: 25%;
+  }
+
+  .spacing {
+    margin-right: 200px;
   }
 
   /* CART */
