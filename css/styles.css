@@ -444,6 +444,10 @@ select {
   margin-right: 10px;
 }
 
+.spacing {
+  margin-right: 200px;
+}
+
 .desktop-side-info p:nth-of-type(2) {
   display: none;
 }
@@ -493,12 +497,12 @@ section > figure > figcaption > p:first-child {
   display: flex;
   justify-content: space-evenly;
   height: 100px;
-  margin: 20px auto;
+  margin: 50px auto;
 }
 
 .cart-item > * {
   margin-right: 15px;
-  font-size: 1.2rem;
+  margin: 10px auto;
 }
 
 .cart-item img {
@@ -543,7 +547,7 @@ section > figure > figcaption > p:first-child {
   padding: 5px 30px;
   border: 1px solid #b1613f;
   font-family: "Dosis", sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 
 /* CHECKOUT */
@@ -619,6 +623,19 @@ details * {
 .log-out {
   display: flex;
   justify-content: end;
+}
+
+.profile div {
+  background-color: white;
+  padding: 0px 10px;
+  border: 1px solid #363c40;
+  margin-bottom: 20px;
+}
+
+.profile h1,
+.profile h2,
+.profile h3 {
+  justify-content: start;
 }
 
 /* NEWSLETTER */
@@ -759,36 +776,6 @@ details * {
     display: none;
   }
 
-  /*
-    grid-template-areas:
-      "jacket jacket jacket"
-      "jackets jackets jackets"
-      "jackets jackets jackets"
-      "hat hat hat"
-      "hats hats hats";
-  }
-
-  .jacket-title {
-    grid-area: jacket;
-  }
-
-  .jacket {
-    grid-area: jackets;
-  }
-
-  .hat-title {
-    grid-area: hat;
-  }
-
-  .hats {
-    grid-area: hats;
-  }
-
-  .view {
-    font-size: 1rem;
-  }
-  */
-
   /* PRODUCT PAGE */
 
   .desktop-cta {
@@ -859,7 +846,7 @@ details * {
 
   .cart-item,
   .list {
-    max-width: 600px;
+    max-width: 400px;
     margin: auto;
   }
 
