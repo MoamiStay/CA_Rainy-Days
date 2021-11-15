@@ -8,10 +8,6 @@ body {
     "nav-menu";
 }
 
- {
-  border: 1px solid black;
-}
-
 header {
   background-color: white;
   position: sticky;
@@ -56,7 +52,6 @@ label {
 }
 
 a {
-  text-decoration: underline;
   color: #d16435;
 }
 
@@ -89,6 +84,7 @@ a:hover {
 .hero-cta {
   top: -520px;
   position: relative;
+  align-items: center;
 }
 
 .cta i {
@@ -104,7 +100,6 @@ a:hover {
 /* HEADER */
 
 .autumn-header {
-  grid-area: "top";
   width: 100%;
   height: 10px;
   object-fit: cover;
@@ -116,9 +111,11 @@ header {
 
 header img {
   max-width: 30%;
+  margin: 5px 0 0 5px;
 }
 
-.drop-down {
+.drop-down,
+h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -183,7 +180,7 @@ input#hamburger-menu:checked ~ nav.hamburger {
 
 .main-content {
   display: grid;
-  grid-template-columns: 1fr, auto;
+  grid-template-columns: 1fr;
   justify-items: center;
 }
 
@@ -321,7 +318,8 @@ footer i {
 }
 
 figure img {
-  max-width: 100%;
+  max-width: 90%;
+  object-fit: contain;
 }
 
 figure {
@@ -347,7 +345,6 @@ figcaption:last-child {
   flex-basis: 30%;
   top: -10px;
   margin-left: 5px;
-  font-size: 1.2rem;
   font-weight: bold;
 }
 
@@ -362,12 +359,31 @@ figcaption:last-child {
 .discount,
 .new-price {
   flex-basis: 15%;
-  font-size: 0.9rem;
 }
 
 .discount {
   color: red;
   text-decoration: line-through;
+  font-size: 1.9;
+}
+
+.sale-note {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  position: relative;
+  right: -150px;
+  top: 40px;
+  border: 1px solid;
+  background-color: white;
+}
+
+.sale-note > p {
+  margin: 0;
+  font-size: 0.9rem;
 }
 
 /* PRODUCT PAGE */
@@ -375,6 +391,10 @@ figcaption:last-child {
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
+}
+
+.left-side {
+  align-items: baseline;
 }
 
 .wrapper {
@@ -420,8 +440,8 @@ select {
 .right-side {
   display: flex;
   flex-direction: column;
-  align-items: end;
-  margin-right: 200px;
+  align-items: flex-end;
+  margin-right: 10px;
 }
 
 .desktop-side-info p:nth-of-type(2) {
@@ -513,6 +533,7 @@ section > figure > figcaption > p:first-child {
 
 .cta-white {
   display: flex;
+  justify-content: center;
   align-items: center;
   max-width: 20%;
   height: 50%;
@@ -522,7 +543,7 @@ section > figure > figcaption > p:first-child {
   padding: 5px 30px;
   border: 1px solid #b1613f;
   font-family: "Dosis", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
 }
 
 /* CHECKOUT */
@@ -619,6 +640,10 @@ details * {
     width: 250px;
   }
 
+  header img {
+    max-width: 20%;
+  }
+
   .cta {
     text-decoration: none;
     padding: 5px 30px;
@@ -626,20 +651,12 @@ details * {
   }
 
   .hero-cta {
-    top: -350px;
+    top: -400px;
   }
 }
 
 /* RESPONSIVE DESKTOP */
 @media screen and (min-width: 850px) {
-  body {
-    /*
-    max-width: 1600px;
-    min-width: 1000px;
-    margin: auto;
-    */
-  }
-
   header img {
     max-width: 100px;
   }
@@ -677,6 +694,7 @@ details * {
   .desktop-top-nav * {
     margin-right: 20px;
     height: 30px;
+    text-decoration: none;
   }
 
   .desktop-top-nav input {
@@ -702,7 +720,7 @@ details * {
   }
 
   .hero-cta {
-    top: -650px;
+    top: -550px;
   }
 
   .mountains {
