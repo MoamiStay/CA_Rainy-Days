@@ -33,55 +33,42 @@
     />
 
     <header>
-      <nav class="mobile-top-nav">
-        <ul>
-          <li><i class="fas fa-search"></i></li>
-          <li>
-            <a href="/index.html"
-              ><img
-                src="images/RainyDays_A.png"
-                class="logo"
-                alt?="Rainy Days Home"
-            /></a>
-          </li>
-          <li>
-            <a href="/profile.html"><i class="fas fa-user"></i></a>
-          </li>
-          <li>
-            <a href="/cart.html"><i class="fas fa-shopping-cart"></i></a>
-          </li>
-        </ul>
-      </nav>
-
+      <div class="mobile-top-nav">
+        <a href="index.html"
+          ><img src="/images/RainyDays_A.png" alt="Rainy Days Logo" />
+        </a>
+  
       <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
       <input type="checkbox" id="hamburger-menu" />
       <nav class="hamburger">
-        <ul>
+        <nav>
+        <ul class="drop-down">
           <li><p>MENU</p></li>
           <li><a href="/index.html">HOME</a></li>
           <li><a href="/store.html">STORE</a></li>
+          <li><a href="/cart.html">CART</a></li>
           <li><a href="/about-us.html">ABOUT</a></li>
+          <li><a href="/profile.html">PROFILE</a></li>
           <li><a href="/newsletter.html">NEWSLETTER</a></li>
         </ul>
       </nav>
-
-      <nav class="desktop-top-nav">
-        <ul>
-          <li>
+    </div>
+            <div class="desktopi">
+              <div class="logo">
             <a href="/index.html"
               ><img
                 src="images/RainyDays_A.png"
-                class="logo"
                 alt?="Rainy Days Home"
             /></a>
-          </li>
+          </div>
 
+            <nav>
+            <ul  class="desktop-top-nav">
+              <li>
+                <i class="fas fa-search"></i><input type="text" placeholder="Search"/>
+              </li>
           <li><a href="/store.html">SHOP</a></li>
           <li><a href="/about-us.html">ABOUT</a></li>
-          <li>
-            <i class="fas fa-search"></i
-            ><input type="text" placeholder="Search" />
-          </li>
           <li>
             <a href="/profile.html"><i class="fas fa-user"></i></a>
           </li>
@@ -90,8 +77,10 @@
           </li>
         </ul>
       </nav>
-    </header>
+      </div>
 
+    </header>
+    
     <main class="prod-page">
       <section class="wrapper">
         <div class="product-view">
@@ -105,9 +94,10 @@
        </div>
      </section>
         
-  
-  <p class="less-margin">Wind Jacket Black</p>
+  <div class="desktop-side-info">
+  <h1 class="less-margin">Wind Jacket Black</h1>
   <p class="less-margin">499,-</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae nobis amet ratione maxime rem quasi id ipsam laudantium. Totam pariatur error eum nihil vitae fuga, excepturi impedit soluta voluptatum tempora sed cumque qui reprehenderit et aspernatur mollitia animi asperiores aperiam eius ducimus. Nemo alias doloremque minima aut.</p>
   <div class="right-side">
   <select name="sizes" placeholder="Size">
     <option value="0">M</option>
@@ -117,8 +107,9 @@
   <input class="product-amount" type="number" name="number" value="1">
 </div>
 
-<div class="wrapper">
-<a href="/cart.html" class="cta">ADD TO CART</a>
+<div class="right-side">
+<a href="/cart.html" class="cta desktop-cta">ADD TO CART</a>
+</div>
 </div>
 
 <section class="product-page-body">
@@ -140,9 +131,9 @@
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut rerum cum repudiandae, ea asperiores aliquid! Sint nisi, vero maxime corporis aliquam possimus minus repellat quo.</p>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 </section>
-<h2>Recently Viewed</h2>
 
-<section class="recent">
+<h2 class="h2">Recently Viewed</h2>
+<section class="recent gridarea">
   <figure>
     <img src="/images/black-jacket.png" alt="Black windbreaker jacket">
     <figcaption>
@@ -183,7 +174,7 @@
           <input type="text" placeholder="Search" />
         </span>
   
-        <p>Sign up for our <a href="#">Newsletter</a></p>
+        <p>Sign up for our <a href="/newsletter.html">Newsletter</a></p>
         <ul>
           <li><a href="/about-us.html">About Us</a></li>
           <li><a href="#">Lorem Ipsum</a></li>

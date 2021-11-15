@@ -31,55 +31,42 @@
       alt="Autumn forest"
     />
     <header>
-      <nav class="mobile-top-nav">
-        <ul>
-          <li><i class="fas fa-search"></i></li>
-          <li>
-            <a href="/index.html"
-              ><img
-                src="images/RainyDays_A.png"
-                class="logo"
-                alt?="Rainy Days Home"
-            /></a>
-          </li>
-          <li>
-            <a href="/profile.html"><i class="fas fa-user"></i></a>
-          </li>
-          <li>
-            <a href="/cart.html"><i class="fas fa-shopping-cart"></i></a>
-          </li>
-        </ul>
-      </nav>
-
+      <div class="mobile-top-nav">
+        <a href="index.html"
+          ><img src="/images/RainyDays_A.png" alt="Rainy Days Logo" />
+        </a>
+  
       <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
       <input type="checkbox" id="hamburger-menu" />
       <nav class="hamburger">
-        <ul>
+        <nav>
+        <ul class="drop-down">
           <li><p>MENU</p></li>
           <li><a href="/index.html">HOME</a></li>
           <li><a href="/store.html">STORE</a></li>
+          <li><a href="/cart.html">CART</a></li>
           <li><a href="/about-us.html">ABOUT</a></li>
+          <li><a href="/profile.html">PROFILE</a></li>
           <li><a href="/newsletter.html">NEWSLETTER</a></li>
         </ul>
       </nav>
-
-      <nav class="desktop-top-nav">
-        <ul>
-          <li>
+    </div>
+            <div class="desktopi">
+              <div class="logo">
             <a href="/index.html"
               ><img
                 src="images/RainyDays_A.png"
-                class="logo"
                 alt?="Rainy Days Home"
             /></a>
-          </li>
+          </div>
 
+            <nav>
+            <ul  class="desktop-top-nav">
+              <li>
+                <i class="fas fa-search"></i><input type="text" placeholder="Search"/>
+              </li>
           <li><a href="/store.html">SHOP</a></li>
           <li><a href="/about-us.html">ABOUT</a></li>
-          <li>
-            <i class="fas fa-search"></i
-            ><input type="text" placeholder="Search" />
-          </li>
           <li>
             <a href="/profile.html"><i class="fas fa-user"></i></a>
           </li>
@@ -88,6 +75,8 @@
           </li>
         </ul>
       </nav>
+      </div>
+
     </header>
 
     <main>
@@ -140,7 +129,7 @@
         <input type="text" placeholder="Search" />
       </span>
 
-      <p>Sign up for our <a href="#">Newsletter</a></p>
+      <p>Sign up for our <a href="/newsletter.html">Newsletter</a></p>
       <ul>
         <li><a href="/about-us.html">About Us</a></li>
         <li><a href="#">Lorem Ipsum</a></li>
